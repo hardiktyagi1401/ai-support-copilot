@@ -3,6 +3,11 @@
 
 Production-grade Retrieval-Augmented Generation (RAG) platform with semantic search, grounded answers, inline citations, retrieval inspection, multi-tenant isolation, and observability tooling.
 
+## Engineering Case Study
+
+- [Condensed Project Brief](docs/report/ai-support-copilot-brief.pdf)
+- [Detailed Architecture Report](docs/report/architecture-case-study.pdf)
+
 ## Stack
 
 - Next.js 14
