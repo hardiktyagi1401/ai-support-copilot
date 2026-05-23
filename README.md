@@ -1,3 +1,4 @@
+
 # AI Support Copilot
 
 Production-grade Retrieval-Augmented Generation (RAG) platform with semantic search, grounded answers, inline citations, retrieval inspection, multi-tenant isolation, and observability tooling.
@@ -37,3 +38,5 @@ See `/docs/screenshots`.
 Phase 1 — Infrastructure  
 Phase 2 — Ingestion Pipeline  
 Phase 3 — Retrieval + Generation
+=======
+# ai-support-copilot
