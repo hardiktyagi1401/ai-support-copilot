@@ -1,0 +1,61 @@
+services:
+
+  # ── PostgreSQL ──────────────────────────────────────────────────────────────
+  postgres:
+    image: postgres:16-alpine
+    container_name: copilot_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-copilot}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-copilot_dev_password}
+      POSTGRES_DB: ${POSTGRES_DB:-copilot_db}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-copilot} -d ${POSTGRES_DB:-copilot_db}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  # ── ChromaDB ───────────────────────────────────────────────────────────────
+  chromadb:
+    image: chromadb/chroma:latest
+    container_name: copilot_chroma
+    restart: unless-stopped
+    environment:
+      ANONYMIZED_TELEMETRY: "false"
+    volumes:
+      - chroma_data:/chroma/chroma
+    ports:
+      - "8002:8000"
+
+  # ── FastAPI backend ────────────────────────────────────────────────────────
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runtime
+    container_name: copilot_api
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      # Override DB/Chroma URLs to use container hostnames
+      DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-copilot}:${POSTGRES_PASSWORD:-copilot_dev_password}@postgres:5432/${POSTGRES_DB:-copilot_db}
+      DATABASE_SYNC_URL: postgresql+psycopg2://${POSTGRES_USER:-copilot}:${POSTGRES_PASSWORD:-copilot_dev_password}@postgres:5432/${POSTGRES_DB:-copilot_db}
+      CHROMA_HOST: chromadb
+      CHROMA_PORT: "8000"
+    ports:
+      - "8001:8001"
+    depends_on:
+       - chromadb
+       - postgres
+    volumes:
+      - /tmp/copilot_uploads:/tmp/copilot_uploads
+
+volumes:
+  postgres_data:
+  chroma_data:

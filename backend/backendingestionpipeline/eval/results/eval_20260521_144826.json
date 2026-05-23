@@ -1,0 +1,264 @@
+{
+  "run_id": "20260521_144826",
+  "timestamp": "2026-05-21T14:48:26.955266",
+  "total_queries": 10,
+  "config": {
+    "top_k": 5,
+    "threshold": null,
+    "dataset": "eval/datasets/golden.json",
+    "model": "gpt-4.1-mini",
+    "embedding_model": "text-embedding-3-small"
+  },
+  "mean_recall_at_k": 0.429,
+  "mean_mrr": 0.429,
+  "mean_precision_at_k": 0.429,
+  "answer_rate": 0.571,
+  "refusal_accuracy": 1.0,
+  "mean_citation_rate": 0.15,
+  "mean_term_coverage": 0.917,
+  "forbidden_term_rate": 0.0,
+  "mean_latency_ms": 1623.0,
+  "p95_latency_ms": 5769,
+  "cases": [
+    {
+      "query_id": "q001",
+      "query": "What is fmap?",
+      "category": "technical",
+      "retrieval": {
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "precision_at_k": 1.0,
+        "chunks_retrieved": 1,
+        "chunks_relevant": 1,
+        "threshold_pass_rate": 1.0,
+        "answered": true
+      },
+      "generation": {
+        "answered": true,
+        "correctly_refused": null,
+        "citation_rate": 0.2,
+        "term_coverage": 1.0,
+        "forbidden_term_present": false,
+        "answer_length_chars": 481
+      },
+      "latency_ms": 2358,
+      "top_score": 0.7015
+    },
+    {
+      "query_id": "q002",
+      "query": "What is foldl?",
+      "category": "technical",
+      "retrieval": {
+        "recall_at_k": 0.0,
+        "mrr": 0.0,
+        "precision_at_k": 0.0,
+        "chunks_retrieved": 0,
+        "chunks_relevant": 1,
+        "threshold_pass_rate": 0.0,
+        "answered": true
+      },
+      "generation": {
+        "answered": false,
+        "correctly_refused": null,
+        "citation_rate": 0.0,
+        "term_coverage": 0.0,
+        "forbidden_term_present": false,
+        "answer_length_chars": 0
+      },
+      "latency_ms": 394,
+      "top_score": 0.6393
+    },
+    {
+      "query_id": "q003",
+      "query": "What are the OO pillars in implementation?",
+      "category": "conceptual",
+      "retrieval": {
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "precision_at_k": 1.0,
+        "chunks_retrieved": 1,
+        "chunks_relevant": 1,
+        "threshold_pass_rate": 1.0,
+        "answered": true
+      },
+      "generation": {
+        "answered": true,
+        "correctly_refused": null,
+        "citation_rate": 0.067,
+        "term_coverage": 1.0,
+        "forbidden_term_present": false,
+        "answer_length_chars": 621
+      },
+      "latency_ms": 2566,
+      "top_score": 0.7634
+    },
+    {
+      "query_id": "q004",
+      "query": "What is research?",
+      "category": "conceptual",
+      "retrieval": {
+        "recall_at_k": 0.0,
+        "mrr": 0.0,
+        "precision_at_k": 0.0,
+        "chunks_retrieved": 0,
+        "chunks_relevant": 1,
+        "threshold_pass_rate": 0.0,
+        "answered": true
+      },
+      "generation": {
+        "answered": true,
+        "correctly_refused": null,
+        "citation_rate": 0.0,
+        "term_coverage": 0.667,
+        "forbidden_term_present": false,
+        "answer_length_chars": 820
+      },
+      "latency_ms": 2499,
+      "top_score": 0.8335
+    },
+    {
+      "query_id": "q005",
+      "query": "What is methodology of research?",
+      "category": "academic",
+      "retrieval": {
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "precision_at_k": 1.0,
+        "chunks_retrieved": 1,
+        "chunks_relevant": 1,
+        "threshold_pass_rate": 1.0,
+        "answered": true
+      },
+      "generation": {
+        "answered": true,
+        "correctly_refused": null,
+        "citation_rate": 0.333,
+        "term_coverage": 1.0,
+        "forbidden_term_present": false,
+        "answer_length_chars": 491
+      },
+      "latency_ms": 5769,
+      "top_score": 0.7827
+    },
+    {
+      "query_id": "q006",
+      "query": "What is filterv?",
+      "category": "technical",
+      "retrieval": {
+        "recall_at_k": 0.0,
+        "mrr": 0.0,
+        "precision_at_k": 0.0,
+        "chunks_retrieved": 0,
+        "chunks_relevant": 1,
+        "threshold_pass_rate": 0.0,
+        "answered": true
+      },
+      "generation": {
+        "answered": false,
+        "correctly_refused": null,
+        "citation_rate": 0.0,
+        "term_coverage": 0.0,
+        "forbidden_term_present": false,
+        "answer_length_chars": 0
+      },
+      "latency_ms": 487,
+      "top_score": 0.6066
+    },
+    {
+      "query_id": "q007",
+      "query": "What is polymorphism?",
+      "category": "conceptual",
+      "retrieval": {
+        "recall_at_k": 0.0,
+        "mrr": 0.0,
+        "precision_at_k": 0.0,
+        "chunks_retrieved": 0,
+        "chunks_relevant": 1,
+        "threshold_pass_rate": 0.0,
+        "answered": true
+      },
+      "generation": {
+        "answered": false,
+        "correctly_refused": null,
+        "citation_rate": 0.0,
+        "term_coverage": 0.0,
+        "forbidden_term_present": false,
+        "answer_length_chars": 0
+      },
+      "latency_ms": 392,
+      "top_score": 0.6382
+    },
+    {
+      "query_id": "q008_unanswerable",
+      "query": "Who won the FIFA World Cup 2022?",
+      "category": "unanswerable",
+      "retrieval": {
+        "recall_at_k": 1.0,
+        "mrr": 0.0,
+        "precision_at_k": 0.0,
+        "chunks_retrieved": 0,
+        "chunks_relevant": 0,
+        "threshold_pass_rate": 0.0,
+        "answered": false
+      },
+      "generation": {
+        "answered": false,
+        "correctly_refused": true,
+        "citation_rate": 0.0,
+        "term_coverage": 0.0,
+        "forbidden_term_present": false,
+        "answer_length_chars": 0
+      },
+      "latency_ms": 638,
+      "top_score": 0.5521
+    },
+    {
+      "query_id": "q009_unanswerable",
+      "query": "What is the weather in Tokyo tomorrow?",
+      "category": "unanswerable",
+      "retrieval": {
+        "recall_at_k": 1.0,
+        "mrr": 0.0,
+        "precision_at_k": 0.0,
+        "chunks_retrieved": 0,
+        "chunks_relevant": 0,
+        "threshold_pass_rate": 0.0,
+        "answered": false
+      },
+      "generation": {
+        "answered": false,
+        "correctly_refused": true,
+        "citation_rate": 0.0,
+        "term_coverage": 0.0,
+        "forbidden_term_present": false,
+        "answer_length_chars": 0
+      },
+      "latency_ms": 592,
+      "top_score": 0.5616
+    },
+    {
+      "query_id": "q010_unanswerable",
+      "query": "Explain quantum entanglement.",
+      "category": "unanswerable",
+      "retrieval": {
+        "recall_at_k": 1.0,
+        "mrr": 0.0,
+        "precision_at_k": 0.0,
+        "chunks_retrieved": 0,
+        "chunks_relevant": 0,
+        "threshold_pass_rate": 0.0,
+        "answered": false
+      },
+      "generation": {
+        "answered": false,
+        "correctly_refused": true,
+        "citation_rate": 0.0,
+        "term_coverage": 0.0,
+        "forbidden_term_present": false,
+        "answer_length_chars": 0
+      },
+      "latency_ms": 531,
+      "top_score": 0.5685
+    }
+  ]
+}

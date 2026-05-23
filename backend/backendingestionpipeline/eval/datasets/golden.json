@@ -1,0 +1,169 @@
+[
+  {
+    "id": "q001",
+    "query": "What is fmap?",
+    "tenant_id": "hardik-dev",
+    "relevant_filenames": ["endsem copy.pdf"],
+    "relevant_chunk_indices": [7],
+    "expected_answer_contains": [
+      "transform",
+      "lambda",
+      "Student",
+      "vector"
+    ],
+    "answer_should_not_contain": [
+      "hotel",
+      "tourism"
+    ],
+    "category": "technical",
+    "difficulty": "easy"
+  },
+
+  {
+    "id": "q002",
+    "query": "What is foldl?",
+    "tenant_id": "hardik-dev",
+    "relevant_filenames": ["endsem copy.pdf"],
+    "relevant_chunk_indices": [3, 4],
+    "expected_answer_contains": [
+      "reduce",
+      "aggregation",
+      "vector"
+    ],
+    "answer_should_not_contain": [
+      "reservation"
+    ],
+    "category": "technical",
+    "difficulty": "easy"
+  },
+
+  {
+    "id": "q003",
+    "query": "What are the OO pillars in implementation?",
+    "tenant_id": "hardik-dev",
+    "relevant_filenames": ["endsem copy.pdf"],
+    "relevant_chunk_indices": [1],
+    "expected_answer_contains": [
+      "encapsulation",
+      "inheritance",
+      "polymorphism"
+    ],
+    "answer_should_not_contain": [
+      "tourism"
+    ],
+    "category": "conceptual",
+    "difficulty": "medium"
+  },
+
+  {
+    "id": "q004",
+    "query": "What is research?",
+    "tenant_id": "hardik-dev",
+    "relevant_filenames": ["BHM-503T.pdf"],
+    "relevant_chunk_indices": [1],
+    "expected_answer_contains": [
+      "knowledge",
+      "question",
+      "systematic"
+    ],
+    "answer_should_not_contain": [
+      "template",
+      "lambda"
+    ],
+    "category": "conceptual",
+    "difficulty": "easy"
+  },
+
+  {
+    "id": "q005",
+    "query": "What is methodology of research?",
+    "tenant_id": "hardik-dev",
+    "relevant_filenames": ["BHM-503T.pdf"],
+    "relevant_chunk_indices": [28],
+    "expected_answer_contains": [
+      "systematic",
+      "methods",
+      "analysis"
+    ],
+    "answer_should_not_contain": [
+      "heap"
+    ],
+    "category": "academic",
+    "difficulty": "medium"
+  },
+
+  {
+    "id": "q006",
+    "query": "What is filterv?",
+    "tenant_id": "hardik-dev",
+    "relevant_filenames": ["endsem copy.pdf"],
+    "relevant_chunk_indices": [3],
+    "expected_answer_contains": [
+      "selection",
+      "predicate",
+      "odd"
+    ],
+    "answer_should_not_contain": [
+      "guest"
+    ],
+    "category": "technical",
+    "difficulty": "easy"
+  },
+
+  {
+    "id": "q007",
+    "query": "What is polymorphism?",
+    "tenant_id": "hardik-dev",
+    "relevant_filenames": ["endsem copy.pdf"],
+    "relevant_chunk_indices": [1],
+    "expected_answer_contains": [
+      "virtual",
+      "generic",
+      "pointer"
+    ],
+    "answer_should_not_contain": [
+      "hotel"
+    ],
+    "category": "conceptual",
+    "difficulty": "medium"
+  },
+
+  {
+    "id": "q008_unanswerable",
+    "query": "Who won the FIFA World Cup 2022?",
+    "tenant_id": "hardik-dev",
+    "relevant_filenames": [],
+    "relevant_chunk_indices": [],
+    "expected_answer_contains": [],
+    "answer_should_not_contain": [],
+    "category": "unanswerable",
+    "difficulty": "control",
+    "should_be_refused": true
+  },
+
+  {
+    "id": "q009_unanswerable",
+    "query": "What is the weather in Tokyo tomorrow?",
+    "tenant_id": "hardik-dev",
+    "relevant_filenames": [],
+    "relevant_chunk_indices": [],
+    "expected_answer_contains": [],
+    "answer_should_not_contain": [],
+    "category": "unanswerable",
+    "difficulty": "control",
+    "should_be_refused": true
+  },
+
+  {
+    "id": "q010_unanswerable",
+    "query": "Explain quantum entanglement.",
+    "tenant_id": "hardik-dev",
+    "relevant_filenames": [],
+    "relevant_chunk_indices": [],
+    "expected_answer_contains": [],
+    "answer_should_not_contain": [],
+    "category": "unanswerable",
+    "difficulty": "control",
+    "should_be_refused": true
+  }
+]
